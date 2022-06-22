@@ -344,7 +344,6 @@ ul.devided .register {
 }
 
 .policy-card .info-name {
-
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 10px;
@@ -353,6 +352,82 @@ ul.devided .register {
 .policy-card .info-description {
     font-size: 0.75rem;
     color: var(--txt-color);
+}
+
+/* top product list */
+
+.product-list-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.top-product-list .product-card {
+    margin: 0 0 25px 0;
+    border-right: 1px solid #eee;
+}
+.top-product-list .product-card:nth-child(2n+4) {
+    border-right: none;
+}
+
+.top-product-list .product-card-img{
+    height: 200px;
+}
+.top-product-list .product-card-info {
+    padding: 20px 0;
+}
+
+
+/* best week box */
+
+.best-week{
+    display: flex;
+    align-items: center;
+}
+.best-week-header {
+    margin: 20px 0 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.best-week-header div{
+    width: 50px;
+    position: relative;
+}
+
+.best-week-box{
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+}
+.best-week-box input{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.best-week .slide-next{
+    right: 0;
+}
+.best-week .slide-prev{
+    left: -45px;
+}
+.best-week .product-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.product-sub-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+.product-sub-title span:nth-child(1){
+    font-size: .9rem;
+    color: var(--gray);
+}
+.best-week-box button.btn-flat{
+    margin-top: 10px;
 }
 
 /*  popular categories  */
@@ -498,6 +573,7 @@ ul.devided .register {
 
 .rate {
     height: 45px;
+    float: left;
 }
 .rate:not(:checked) > input {
     position:absolute;
@@ -528,6 +604,39 @@ ul.devided .register {
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
+}
+
+/* offer box */
+.offer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.offer .info{
+    text-align: left;
+}
+.offer .info span{
+    color: var(--gray);
+    font-size: .9rem;
+}
+.offer .countdown{
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.offer .countdown li {
+    padding: 0 10px;
+    border-right: 1px solid var(--border-color);
+}
+.offer .countdown li:last-child {
+    border-right: none;
 }
 
 
@@ -610,9 +719,6 @@ ul.devided .register {
     font-size: 2rem;
 }
 
-
-/* best products */
-
 .product-cards{
     margin-bottom: 4rem;
 }
@@ -625,10 +731,6 @@ ul.devided .register {
     transition: all 0.3s ease-in-out;
     margin: 0 20px;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 .product-card:hover {
@@ -741,7 +843,7 @@ ul.devided .register {
 .brand-slider .sliders {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     filter: grayscale(100%);
 }
@@ -757,7 +859,48 @@ ul.devided .register {
     background-repeat: no-repeat;
 }
 
+/* btn slider */
 
+
+.slide-controll {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide-controll:hover {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+}
+
+.slide-next {
+    right: -25px;
+}
+
+.slide-prev {
+    left: -25px;
+}
+
+.slider:hover .slide-next {
+    right: 50px;
+}
+
+.slider:hover .slide-prev {
+    left: 50px;
+}
+
+.section-header div{
+    position: relative;
+    width: 50px;
+}
 
 /* subscribe */
 .subscribe {
