@@ -410,7 +410,7 @@ ul.devided .register {
     margin: 0 0 25px 0;
     border-right: 1px solid #eee;
 }
-.top-product-list .product-card:nth-child(2n+4) {
+.top-product-list .product-card:nth-child(4n+4) {
     border-right: none;
 }
 
